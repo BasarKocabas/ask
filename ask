@@ -1,8 +1,5 @@
 #!/bin/bash
 
-
-echo "Works"
-
 if [ -z "$ASK_API_URL" ]
 then
 	echo "Environment varible 'ASK_API_URL' is not set"
@@ -20,12 +17,25 @@ then
 fi
 
 
+pipe_input=""
+
+if [ ! -t 0 ]
+then
+	pipe_input=$(cat)
+fi
+
+command_arguments=$*
+
+content="$command_arguments $pipe_input"
+
+echo $content
+
 
 response=$(curl $ASK_API_URL -s \
  -H "Content-Type: application/json" \
  -H "Authorization: Bearer $ASK_API_KEY" \
  -d '{
- "model": "'$ASK_MODEL'",
+ "model": "'"$ASK_MODEL"'",
  	"messages": [
  		{
  		"role": "system",
@@ -33,10 +43,9 @@ response=$(curl $ASK_API_URL -s \
  	},
  	{
  		"role": "user",
- 		"content": "Explain the importance of fast language models"
+ 		"content": "'"$content"'"
  	}
  ]
  }'
 )
-#hello
 echo $response | jq -r '.choices[0].message.content'
