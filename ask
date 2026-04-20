@@ -3,17 +3,20 @@
 if [ -z "$ASK_API_URL" ]
 then
 	echo "Environment varible 'ASK_API_URL' is not set"
+	exit 1
 fi
 
 if [ -z "$ASK_MODEL" ]
 then
 	echo "Environment varible 'ASK_MODEL' is not set"
+	exit 1
 fi
 
 
 if [ -z "$ASK_API_KEY" ]
 then
 	echo "Environment varible 'ASK_API_KEY' is not set"
+	exit 1
 fi
 
 
