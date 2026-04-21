@@ -4,7 +4,7 @@ Thank you for your interest in improving ask :)  Since this is a small bash scri
 
 # 1. Found a Bug or Have an Idea?
 
-Opening an Issue on GitHub first to discuss it before you spend time writing code would be appreciated.
+Opening an Issue on GitHub first to discuss it before changing code would be appreciated.
 
 Include your Bash version, curl and jq version and the exact error message or unexpected behavior.
 
