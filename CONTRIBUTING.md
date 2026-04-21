@@ -1,6 +1,6 @@
 # Contributing to ask
 
-Thank you for your interest in improving ask :)  Since this is a small bash script we want to keep it as simple aspossible.
+Thank you for your interest in improving ask :)  Since this is a small bash script we want to keep it as simple as possible.
 
 # 1. Found a Bug or Have an Idea?
 
