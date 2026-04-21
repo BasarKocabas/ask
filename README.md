@@ -2,7 +2,7 @@
 A linux - bash command line tool for prompting with an llm 
 
 ## EXAMPLE USAGES
-\```bash
+```bash
 [bk@bk ask]$ top -b -o %MEM -n 1 | head -n 20 | ask "find the highest memory consuming process"
 1771 bk        20   0   49,4g 532208 346296 S   0,0   3,3   0:30.81 brave
 
@@ -26,7 +26,7 @@ Creates a compressed archive (archive.tar.gz) of the contents in /myfolder.
 - z: compress
 - v: show progress
 - f: output file name
-\```
+```
 
 ## Known Limitations
 **Token-limit:** If the given input is too large in terms of size it does not return any output due to prompt token limit.
